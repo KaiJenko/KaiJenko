@@ -1,0 +1,34 @@
+ //this program finds out if there is protein in a DNA strand
+ //test ATGCGATACGCTTGA, ATGCGATACGTGA, ATTAATATGTACTGA
+public class DNA {
+
+  public static boolean dnaCheck(String dna){
+    System.out.println("\n");
+    int startCodon = dna.indexOf("ATG");
+    System.out.println("The start codon is index: " + startCodon);
+    int endCodon = dna.indexOf("TGA");
+    System.out.println("The end codon is index: " + endCodon);
+    System.out.println("Is there a protein in this strand of DNA: ");
+
+    if (startCodon != -1 && endCodon != -1){
+      int nucleotides = startCodon - endCodon;
+      if (nucleotides % 3 == 0){
+        String protein = dna.substring(startCodon, endCodon+3);
+        return true;
+      }
+      else{
+        return false;   
+      }
+  }  
+   return false;
+  }
+
+  public static void main(String[] args){
+    String dna1 = "ATGCGATACGCTTGA";
+    String dna2 = "ATGCGATACGTGA";
+    String dna3 = "ATTAATATGTACTGA";  
+    System.out.println(dnaCheck(dna1));
+    System.out.println(dnaCheck(dna2));
+    System.out.println(dnaCheck(dna3));
+  }
+}
