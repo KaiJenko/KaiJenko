@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@_Theme1.css" />
+   </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1064.0" minWidth="10.0" prefWidth="800.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="580.0" minWidth="10.0" prefWidth="400.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="189.3333740234375" minHeight="0.0" prefHeight="114.1111068725586" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="485.0" minHeight="10.0" prefHeight="392.00004069010424" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="143.99996948242188" minHeight="0.0" prefHeight="71.77777099609375" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="759.0" spacing="5.0" style="-fx-border-color: black;">
+      <GridPane.margin>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      </GridPane.margin>
+      <children>
+         <Label alignment="TOP_CENTER" prefHeight="79.0" prefWidth="605.0" style="-fx-font-size: 19;" text="Welcome to the Checkout Screen, Based On Your Checkout Choice please pay below! The total Your Shop Came to today is: " wrapText="true">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Label>
+         <Label fx:id="lbl_totalFromShopController">
+            <font>
+               <Font name="MV Boli" size="19.0" />
+            </font>
+         </Label>
+      </children>
+      <padding>
+         <Insets left="20.0" />
+      </padding>
+   </HBox>
+   <VBox prefHeight="522.0" prefWidth="379.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets right="20.0" />
+      </GridPane.margin>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="0.0" prefWidth="377.0" spacing="25.0">
+         <Label text="Checkout: Products Scanned">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+            <font>
+               <Font name="MV Boli" size="15.0" />
+            </font>
+         </Label>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="605.0" prefWidth="397.0">
+         <ListView fx:id="shopList" prefHeight="429.0" prefWidth="339.0">
+            <HBox.margin>
+               <Insets bottom="10.0" />
+            </HBox.margin>
+         </ListView>
+      </HBox>
+   </VBox>
+   <VBox maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-border-color: BLACK;" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets left="20.0" right="20.0" />
+      </GridPane.margin>
+   </VBox>
+   <HBox prefHeight="445.0" prefWidth="759.0" style="-fx-border-color: Black;" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets left="20.0" right="20.0" />
+      </GridPane.margin>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="380.0" spacing="50.0">
+         <Button fx:id="BTN_PayCash" disable="true" mnemonicParsing="false" onAction="#cashPayment" text="Pay With Cash">
+            <font>
+               <Font name="MV Boli" size="16.0" />
+            </font>
+         </Button>
+         <TextField fx:id="TF_CashPayment" alignment="CENTER" disable="true" maxWidth="-Infinity" prefHeight="44.0" prefWidth="230.0" promptText="Enter Payment Amount">
+            <font>
+               <Font name="MV Boli" size="18.0" />
+            </font>
+         </TextField>
+         <Button fx:id="BTN_ConfirmCash" disable="true" mnemonicParsing="false" onAction="#validateCash" text="Confirm Cash Payment">
+            <font>
+               <Font name="MV Boli" size="16.0" />
+            </font>
+         </Button>
+         <Label fx:id="lbl_Change" visible="false" />
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="380.0" spacing="30.0">
+         <Button fx:id="BTN_PayCard" disable="true" mnemonicParsing="false" onAction="#cardPayment" text="Pay With Card">
+            <font>
+               <Font name="MV Boli" size="16.0" />
+            </font>
+         </Button>
+         <ComboBox fx:id="CardType" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="39.0" prefWidth="181.0" promptText="Select Card Type" />
+         <TextField fx:id="TF_CardNumber" disable="true" maxWidth="-Infinity">
+            <font>
+               <Font name="MV Boli" size="18.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="TF_CardSortNum" disable="true" maxWidth="-Infinity">
+            <font>
+               <Font name="MV Boli" size="18.0" />
+            </font>
+         </TextField>
+         <Button fx:id="BTN_ConfirmCard" disable="true" mnemonicParsing="false" onAction="#cardType" text="Confirm Card Payment">
+            <font>
+               <Font name="MV Boli" size="16.0" />
+            </font>
+         </Button>
+      </VBox>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1">
+      <GridPane.margin>
+         <Insets bottom="10.0" right="20.0" top="10.0" />
+      </GridPane.margin>
+      <children>
+         <Label prefHeight="72.0" prefWidth="184.0" style="-fx-font-size: 18;" text="The Checkout You Chose To Use Is:" wrapText="true">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="lbl_CheckoutType" style="-fx-font-size: 18;" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="76.0" prefWidth="799.0" spacing="25.0" style="-fx-border-color: black;" GridPane.rowIndex="2">
+      <children>
+         <ComboBox fx:id="loyaltyType" prefHeight="36.0" prefWidth="209.0" promptText="Select loyalty card" />
+         <Button fx:id="BTN_LoadPoints" mnemonicParsing="false" onAction="#loadLoyaltyPoints" style="-fx-font-size: 15;" text="Load Loyalty Points">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Button>
+         <Button fx:id="BTN_AddPoints" mnemonicParsing="false" onAction="#addLoyaltyPoints" style="-fx-font-size: 15;" text="Add Loyalty Points" />
+      </children>
+      <GridPane.margin>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      </GridPane.margin>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <children>
+         <Label fx:id="lbl_LoyaltyPoints" style="-fx-font-size: 15;" wrapText="true" />
+         <Label fx:id="lbl_LoyaltyTotal" style="-fx-font-size: 1;" text="hi" wrapText="true">
+            <font>
+               <Font size="1.0" />
+            </font></Label>
+      </children>
+      <GridPane.margin>
+         <Insets bottom="10.0" right="20.0" top="10.0" />
+      </GridPane.margin>
+   </HBox>
+</GridPane>

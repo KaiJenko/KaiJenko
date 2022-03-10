@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="825.0" style="-fx-border-color: black;" stylesheets="@_Theme1.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1064.0" minWidth="10.0" prefWidth="800.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="189.3333740234375" minHeight="0.0" prefHeight="77.33333206176758" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="485.0" minHeight="10.0" prefHeight="395.4444580078125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="143.99996948242188" minHeight="10.0" prefHeight="102.22219848632812" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <HBox alignment="CENTER" prefHeight="112.0" prefWidth="759.0" style="-fx-border-color: black;">
+      <GridPane.margin>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      </GridPane.margin>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="You Have Paid for Your Shopping, Thankyou &amp; GoodBye!" underline="true">
+         <font>
+            <Font name="MV Boli" size="25.0" />
+         </font>
+      </Label>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="75.0" style="-fx-border-color: black;" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <GridPane.margin>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+      </GridPane.margin>
+      <Button fx:id="BTN_NewShop" mnemonicParsing="false" onAction="#MainMenu" style="-fx-font-size: 18;" text="Start a New Shop" />
+      <Button fx:id="BTN_Close" mnemonicParsing="false" onAction="#ExitProgram" style="-fx-font-size: 18;" text="Close Program" />
+      <Button mnemonicParsing="false" onAction="#OrderScreen" style="-fx-font-size: 18;" text="Total Orders" />
+   </HBox>
+   <VBox maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-border-color: BLACK;" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets left="20.0" right="20.0" />
+      </GridPane.margin>
+   </VBox>
+   <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: Black;" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets left="20.0" right="20.0" />
+      </GridPane.margin>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="380.0">
+         <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="380.0">
+            <Label prefHeight="114.0" prefWidth="271.0" style="-fx-font-size: 19;" text="This is your Receipt! The products you purchased are displayed on the right" wrapText="true">
+               <font>
+                  <Font name="MV Boli" size="19.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="380.0">
+            <Label prefHeight="84.0" prefWidth="216.0" style="-fx-font-size: 19;" text="The Amount Your Shop Came To Is: " textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="MV Boli" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_TotalFromCheckout">
+               <font>
+                  <Font name="MV Boli" size="19.0" />
+               </font>
+               <padding>
+                  <Insets top="38.0" />
+               </padding>
+            </Label>
+         </HBox>
+         <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" prefWidth="380.0">
+            <Label style="-fx-font-size: 19;" text="The Change Received is : " />
+            <Label fx:id="lbl_ChangeReceived" style="-fx-font-size: 19;" />
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="380.0">
+            <children>
+               <Label fx:id="lbl_PointsUsed" style="-fx-font-size: 19;" />
+            </children>
+         </HBox>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="380.0" spacing="30.0">
+         <ListView fx:id="ReceiptList" prefHeight="372.0" prefWidth="348.0" />
+      </VBox>
+   </HBox>
+</GridPane>
