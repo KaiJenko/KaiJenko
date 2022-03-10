@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @KaiJenko (Kai Jenkinson)
 - 👀 I’m interested in software engineering and development along with many other subjects 
--     within the computer science industry, such as cyber security and networking
+-     within the computer science industry, such as cyber security and networking and statistical programming
 - 🌱 I’m currently studying a Computer science bachelors degree at the University of Huddersfield
 - 📫 How to reach me - Kaijenks02@gmail.com 
 
