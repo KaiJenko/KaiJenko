@@ -8,4 +8,4 @@
 
 This is my Github repsitory I will be using to showcase my various skills and projects I have completed,
 in a multitude of programming languages, at university and in my own time. Through this I hope to obtain 
-a graduate scheme with a reputable compayny who will help me build new skills!
+a graduate scheme with a reputable company who will help me build new skills!
