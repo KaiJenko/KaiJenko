@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @KaiJenko (Kai Jenkinson)
 - No contributions in the past year due to being on industrial placement for 14 months at Collins Aerospace 
 - 👀 I’m interested in software engineering and development along with many other subjects 
--     within the computer science industry, such as cyber security and networking and statistical programming
+-     within the computer science industry, such as data analytics and software consultancy
 - 🌱 I’m currently studying a Computer science bachelors degree at the University of Huddersfield
 - 📫 How to reach me - Kaijenks02@gmail.com 
 
